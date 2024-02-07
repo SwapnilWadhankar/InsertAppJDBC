@@ -40,5 +40,11 @@ public class InsertApp {
             int rowsAffected = statement.executeUpdate(sqlInsertQuery);
             System.out.println("Rows affected :: "+rowsAffected);
 
+            //close the resources
+            statement.close();
+            connection.close();
+            scanner.close();
+            System.out.println("Closing the resources!!");
+
     }
 }
